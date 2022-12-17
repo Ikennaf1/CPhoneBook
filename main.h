@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include "Structs/screen.h"
 #include "sqlite/sqlite3.h"
 
 void dbInit();

@@ -9,9 +9,11 @@ void registerScreenShow()
     printf("\nRegister new user:\n");
 
     do {
-        if (count == 1) {
+        fflush(stdin);
+        if (count == 1)
             printf("\nSomething went wrong with User registration. Please try again.\n");
-        }
+        count = 0;
+        
         printf("\nEnter username: ");
         scanf("%s", username);
 
