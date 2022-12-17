@@ -15,10 +15,10 @@ void dbInit()
     sqlite3 *db;
     char *dbErrMsg = 0;
     int rc;
-    char *user = "\
+    char *users = "\
         CREATE TABLE IF NOT EXISTS `users` (\
             `id` UNSIGNED INTEGER PRIMARY KEY,\
-            `username` VARCHAR (32) NOT NULL,\
+            `username` VARCHAR (32) UNIQUE NOT NULL,\
             `password` VARCHAR(128) NOT NULL,\
             `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,\
             `modified_at` DATETIME NULL\
@@ -41,17 +41,13 @@ void dbInit()
 
     if (rc) {
         fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
-    } else {
-        // fprintf(stdout, "Database opened successfully\n");
     }
 
     // Create users table
-    rc = sqlite3_exec(db, user, callback, 0, &dbErrMsg);
+    rc = sqlite3_exec(db, users, callback, 0, &dbErrMsg);
 
     if (rc) {
         fprintf(stderr, "Can't create table: %s\n", sqlite3_errmsg(db));
-    } else {
-        // fprintf(stdout, "Table created successfully\n");
     }
 
     // Create contacts table
@@ -59,8 +55,6 @@ void dbInit()
 
     if (rc) {
         fprintf(stderr, "Can't create table: %s\n", sqlite3_errmsg(db));
-    } else {
-        // fprintf(stdout, "Table created successfully\n");
     }
 
     sqlite3_close(db);
