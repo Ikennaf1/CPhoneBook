@@ -1,5 +1,7 @@
 #include "main.h"
 
+screen_t *screenStack = NULL;
+
 int main(void)
 {
     printf("\n\n\

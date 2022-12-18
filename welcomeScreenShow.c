@@ -4,6 +4,7 @@ void welcomeScreenShow()
 {
     char c;
     short int count = 0;
+    screenStackCreate();
 
     do {
         fflush(stdin);

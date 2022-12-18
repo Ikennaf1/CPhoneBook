@@ -6,6 +6,9 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include "sqlite/sqlite3.h"
+#include "ScreenStack/screenStack.h"
+
+extern screen_t *screenStack;
 
 void dbInit();
 void cpbRun();

@@ -1,0 +1,8 @@
+#include "screenStack.h"
+#include "screenStackCreate.c"
+#include "screenStackError.c"
+#include "screenStackExists.c"
+#include "screenStackFree.c"
+#include "screenStackPop.c"
+#include "screenStackPrintAll.c"
+#include "screenStackPush.c"
