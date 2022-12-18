@@ -1,6 +1,6 @@
 #include "main.h"
 
-void homeScreenShow()
+void welcomeScreenShow()
 {
     char c;
     short int count = 0;
@@ -22,5 +22,5 @@ void homeScreenShow()
         count = 1;
     } while (c != '1' && c != '2' && c != '3');
 
-    homeScreenAction(c);
+    welcomeScreenAction(c);
 }

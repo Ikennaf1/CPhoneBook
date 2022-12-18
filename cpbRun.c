@@ -6,5 +6,5 @@
  */
 void cpbRun()
 {
-    homeScreenShow();
+    welcomeScreenShow();
 }

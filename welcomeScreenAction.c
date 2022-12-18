@@ -1,6 +1,6 @@
 #include "main.h"
 
-void homeScreenAction(char c)
+void welcomeScreenAction(char c)
 {
     switch (c) {
         case '1':
@@ -9,13 +9,13 @@ void homeScreenAction(char c)
             break;
         case '2':
             registerScreenShow();
-            // homeScreenShow();
+            // welcomeScreenShow();
             break;
         case '3':
             printf("Option 3 selected\n");
             break;
         default:
-            homeScreenShow();
+            welcomeScreenShow();
             break;
     }
 }
