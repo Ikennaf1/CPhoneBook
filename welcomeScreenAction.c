@@ -4,8 +4,7 @@ void welcomeScreenAction(char c)
 {
     switch (c) {
         case '1':
-            // printf("Option 1 selected\n");
-            // loginScreenShow();
+            loginScreenShow();
             break;
         case '2':
             registerScreenShow();

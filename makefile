@@ -1,7 +1,7 @@
-mystack= ScreenStack/screenStackAll.c
+mystack = ScreenStack/screenStackAll.c
 stack: $(mystack)
 
-myc= main.h dbinit.c cpbRun.c welcomeScreenShow.c welcomeScreenAction.c registerScreenShow.c userRegister.c main.c
+myc = main.h dbinit.c cpbRun.c welcomeScreenShow.c welcomeScreenAction.c registerScreenShow.c loginScreenShow.c userRegister.c main.c
 
 sql: sqlite/sqlite3.c
 

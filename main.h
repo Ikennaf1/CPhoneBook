@@ -16,6 +16,7 @@ void cpbExit();
 void welcomeScreenShow();
 void welcomeScreenAction(char c);
 void registerScreenShow();
+void loginScreenShow();
 int userRegister(char *username, char *password);
 
 #endif /* _CPB_ */
